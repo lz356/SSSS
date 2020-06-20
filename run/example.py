@@ -1,4 +1,4 @@
-import SSSS.SSSS as SSSS
+import SSSS.base as SSSS
 
 topic = 'machine learning control'
 
