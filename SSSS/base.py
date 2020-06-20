@@ -4,14 +4,15 @@ import pandas as pd
 import numpy as np
 import os
 from random import random
+import itertools
 
 def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number_of_searches_per_key_word_per_year = 10, sleep_interval = 360):
 
     # generate keyword list from sub-keyword list
     all_combination = list(itertools.product(*sub_keyword_list))
-    final_key_word_list = []
+    key_words_list = []
     for i in range(len(all_combination)):
-        final_key_word_list += str(all_combination[i]).replace("'", "").replace('(','').replace(')','')
+        key_words_list += [str(all_combination[i]).replace("'", "").replace('(','').replace(')','')]
 
     def query_result(key_word, year_start, year_end):
 
@@ -40,23 +41,23 @@ def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number
         except OSError:
             print("\n**********************************************************\nsummary.csv is detected to be open. Please close the summary.csv before continuing...\n********************************************************** ")
 
-    if not os.path.isdir("topics/{}/".format(topic)):
-        os.mkdir('topics/{}/'.format(topic))
+    if not os.path.isdir("../results/topics/{}/".format(topic)):
+        os.mkdir('../results/topics/{}/'.format(topic))
 
     # define the summary dataframe
-    if not os.path.exists('topics/{}/summary.csv'.format(topic)):
+    if not os.path.exists('../results/topics/{}/summary.csv'.format(topic)):
         summary_df = pd.DataFrame([],columns = ['title', 'num_citations', 'year', 'excerpt', 'url', 'url_pdf','indicator','key_words'])
-        summary_df.to_csv('topics/{}/summary.csv'.format(topic), index = None, header = summary_df.columns)
+        summary_df.to_csv('../results/topics/{}/summary.csv'.format(topic), index = None, header = summary_df.columns)
     else:
-        summary_df = pd.read_csv('topics/{}/summary.csv'.format(topic))
+        summary_df = pd.read_csv('../results/topics/{}/summary.csv'.format(topic))
 
     # detect whether the summary.csv file is open
     #    detect_file_open()
 
     # get all the inputs
     #input_string = input("Enter key words separated by semicolumn: ")
-    input_string = final_key_word_list
-    key_words_list  = list(set(input_string.split(";")))
+    #input_string = final_key_word_list
+    #key_words_list  = list(set(input_string.split(";")))
     print('Total keyword list: {}'.format(key_words_list))
     print('Total number of keywords is: {}'.format(len(key_words_list)))
     #year_from = int(input("Year From: "))
