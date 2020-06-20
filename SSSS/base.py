@@ -7,7 +7,17 @@ from random import random
 import itertools
 
 def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number_of_searches_per_key_word_per_year = 10, sleep_interval = 360):
+    """
+    The function conducts SSSS as introduced in the journal paper: XXX.
 
+    :param topic: string; the topic of this search. The searched result Will be saved as summary.csv in results/topics/[topic]
+    :param sub_keyword_list: list of list of strings; defines the sub-keyword list of SSSS, example: [['energy','gas'],['prediction', 'forecasting'], ['in buildings', 'HVAC']]
+    :param year_from: int; limit start year of search
+    :param year_to: int; limit end year of search
+    :param citation_threshold: int; limit the minimum citation number of searched papers
+    :param number_of_searches_per_key_word_per_year: int; number of paper crawled from each keyword seasrch
+    :param sleep_interval: float; seconds that is setted between each search
+    """
     # generate keyword list from sub-keyword list
     all_combination = list(itertools.product(*sub_keyword_list))
     key_words_list = []
@@ -36,8 +46,8 @@ def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number
 
     def detect_file_open():
         try:
-            os.rename('topics/{}/summary.csv'.format(topic), 'topics/{}/temp_summary.csv'.format(topic))
-            os.rename('topics/{}/temp_summary.csv'.format(topic), 'topics/{}/summary.csv'.format(topic))
+            os.rename('./results/topics/{}/summary.csv'.format(topic), './results/topics/{}/temp_summary.csv'.format(topic))
+            os.rename('./results/topics/{}/temp_summary.csv'.format(topic), './results/topics/{}/summary.csv'.format(topic))
         except OSError:
             print("\n**********************************************************\nsummary.csv is detected to be open. Please close the summary.csv before continuing...\n********************************************************** ")
 
@@ -104,4 +114,4 @@ def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number
                 df_nth.columns = ['title', 'num_citations', 'year', 'excerpt', 'url', 'url_pdf','indicator','key_words']
                 summary_df = summary_df.append(df_nth)
                 # make sure that summary.csv file is closed
-                summary_df.to_csv('topics/{}/summary.csv'.format(topic), index = False)
+                summary_df.to_csv('./results/topics/{}/summary.csv'.format(topic), index = False)
