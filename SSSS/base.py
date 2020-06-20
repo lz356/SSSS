@@ -46,8 +46,8 @@ def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number
 
     def detect_file_open():
         try:
-            os.rename('./results/topics/{}/summary.csv'.format(topic), './results/topics/{}/temp_summary.csv'.format(topic))
-            os.rename('./results/topics/{}/temp_summary.csv'.format(topic), './results/topics/{}/summary.csv'.format(topic))
+            os.rename('../results/topics/{}/summary.csv'.format(topic), '../results/topics/{}/temp_summary.csv'.format(topic))
+            os.rename('../results/topics/{}/temp_summary.csv'.format(topic), '../results/topics/{}/summary.csv'.format(topic))
         except OSError:
             print("\n**********************************************************\nsummary.csv is detected to be open. Please close the summary.csv before continuing...\n********************************************************** ")
 
