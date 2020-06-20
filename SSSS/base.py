@@ -114,4 +114,4 @@ def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number
                 df_nth.columns = ['title', 'num_citations', 'year', 'excerpt', 'url', 'url_pdf','indicator','key_words']
                 summary_df = summary_df.append(df_nth)
                 # make sure that summary.csv file is closed
-                summary_df.to_csv('./results/topics/{}/summary.csv'.format(topic), index = False)
+                summary_df.to_csv('../results/topics/{}/summary.csv'.format(topic), index = False)
