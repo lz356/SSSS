@@ -1,5 +1,5 @@
 import time
-import SSSS.scholar
+import SSSS.scholar as scholar
 import pandas as pd
 import numpy as np
 import os
