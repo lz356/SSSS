@@ -26,7 +26,8 @@ setuptools.setup(
     install_requires=[
         'SSSS@git+ssh://git@github.com/lz356/SSSS.git@master',
         'numpy',
-        'pandas'
+        'pandas',
+        'beautifulsoup4'
     ],
     extras_require={
         'dev': [
