@@ -3,7 +3,7 @@ Paper Searching Tool termed as Sub-keyword Synonym Subtopics Searching described
 
 Please cite the paper if you use the code for publication:
 
-TBD
+Zhang, L., Wen, J., Li, Y., Chen, J., Ye, Y., Fu, Y., & Livingood, W. (2021). A review of machine learning in building load prediction. Applied Energy, 285, 116452.
 
 This project is a work-in-progress.
 
