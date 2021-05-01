@@ -24,7 +24,7 @@ setuptools.setup(
     url=metadata['__url__'],
     packages=setuptools.find_packages(),
     install_requires=[
-        'SSSS@git+ssh://git@github.com/lz356/SSSS.git@master',
+        # 'SSSS@git+ssh://git@github.com/lz356/SSSS.git@master',
         'numpy',
         'pandas',
         'beautifulsoup4'
