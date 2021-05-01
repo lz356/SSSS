@@ -9,6 +9,7 @@ This project is a work-in-progress.
 
 Installation
 Download and install [git](https://git-scm.com/download/win)
+
 Download and install the latest version of [Conda](https://docs.conda.io/en/latest/) (version 4.4 or above)
 
 Run Anaconda Prompt as Administrator
