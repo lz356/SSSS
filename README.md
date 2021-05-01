@@ -8,6 +8,7 @@ Zhang, L., Wen, J., Li, Y., Chen, J., Ye, Y., Fu, Y., & Livingood, W. (2021). A 
 This project is a work-in-progress.
 
 Installation
+
 Download and install [git](https://git-scm.com/download/win)
 
 Download and install the latest version of [Conda](https://docs.conda.io/en/latest/) (version 4.4 or above)
