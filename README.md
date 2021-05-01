@@ -23,6 +23,10 @@ Create a new conda environment:
 
 (If you’re using a version of conda older than 4.4, you may need to instead use source activate <name-of-repository>.)
 
+Ensure that you have navigated to the top level of your cloned repository. You will execute all your pip commands from this location. For example:
+
+`$ cd /path/to/repository
+
 Make sure you are using the latest version of pip:
 
 `$ pip install --upgrade pip`
