@@ -51,6 +51,13 @@ def SSSS(topic, sub_keyword_list, year_from, year_to, citation_threshold, number
         except OSError:
             print("\n**********************************************************\nsummary.csv is detected to be open. Please close the summary.csv before continuing...\n********************************************************** ")
 
+    # Create folder structure
+    if not os.path.isdir("../results/"):
+        os.mkdir('../results/')
+
+    if not os.path.isdir("../results/topics/"):
+        os.mkdir('../results/topics/')
+
     if not os.path.isdir("../results/topics/{}/".format(topic)):
         os.mkdir('../results/topics/{}/'.format(topic))
 
