@@ -25,7 +25,7 @@ Create a new conda environment:
 
 Ensure that you have navigated to the top level of your cloned repository. You will execute all your pip commands from this location. For example:
 
-`$ cd /path/to/repository
+`$ cd /path/to/repository`
 
 Make sure you are using the latest version of pip:
 
