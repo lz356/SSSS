@@ -27,10 +27,6 @@ Ensure that you have navigated to the top level of your cloned repository. You w
 
 `$ cd /path/to/repository`
 
-Make sure you are using the latest version of pip:
-
-`$ pip install --upgrade pip`
-
 Install the environment needed for this repository:
 
 `$ pip install -e .[dev]`
