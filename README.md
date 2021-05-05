@@ -1,4 +1,4 @@
-# SSSS
+# Sub-keyword Synonym Subtopics Searching (SSSS)
 Paper Searching Tool termed as Sub-keyword Synonym Subtopics Searching described in the paper "A review of machine learning in building load prediction", Section 2
 
 Please cite the paper if you use the code for publication:
